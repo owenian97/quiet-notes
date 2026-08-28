@@ -1,0 +1,13 @@
+node_modules/
+.env
+*.log
+.DS_Store
+coverage/
+outputs/
+work/
+phone-setup.ps1
+stop-phone-access.ps1
+Start Quiet Notes on Phone.cmd
+Stop Quiet Notes Phone Access.cmd
+Start Quiet Notes.cmd
+start-notes.ps1
