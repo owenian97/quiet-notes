@@ -22,9 +22,9 @@
   <button id="saveBtn" class="primary full">Save Note Now</button><p class="muted">Save keeps the working copy inside Quiet Notes. Export creates a separate file outside the app.</p><div class="secondary-actions"><button id="exportBtn">Export Current Copy to Files / OneDrive</button><button id="deleteBtn" class="danger">Delete from Quiet Notes</button></div>
 </section>
 <section id="voiceView" hidden>
-  <div class="editor-top"><span id="voiceSaveStatus" class="muted">Not recorded</span></div><div class="eyebrow">VOICE MEMO</div><h1>Record a thought</h1>
+  <div class="editor-top"><span id="voiceSaveStatus" class="muted">Not recorded</span></div><div class="eyebrow">VOICE MEMO</div><h1 id="voiceHeading">Record a Voice Memo</h1>
   <label for="voiceTitle">Name</label><div class="title-wrap"><span>[Voice-</span><input id="voiceTitle" maxlength="60" value="" placeholder="Untitled"><span>]</span></div>
   <button id="saveVoiceNameBtn" class="full" disabled>Save/Rename Voice Memo</button><p class="muted">Enter a name before recording, or rename it afterward with the button above.</p>
-  <div id="recordingStatus" class="recording-status"><span class="dot"></span><span id="recordingText">Ready to record</span><span id="timer">00:00</span></div><button id="recordBtn" class="primary full">● Start Recording</button><div id="voicePreview"></div>
+  <div id="recordingStatus" class="recording-status"><span class="dot"></span><span id="recordingText">Ready to record</span><span id="timer">00:00</span></div><div id="voicePreview"></div><button id="recordBtn" class="primary full">● Start Recording</button>
 </section>
-</main><div id="toast" class="toast"></div><script type="module" src="/app.js?v=10"></script></body></html>
+</main><div id="toast" class="toast"></div><script type="module" src="/app.js?v=11"></script></body></html>

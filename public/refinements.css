@@ -3,3 +3,11 @@ body{background:radial-gradient(900px 480px at 50% -180px,#263e65 0,transparent 
 /* iPhone safe-area correction: keeps the app header below the status bar. */
 header{height:auto;min-height:calc(70px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top)}
 @media(max-width:540px){header .brand small{font-size:11px}#homeBtn{flex:0 0 auto}}
+.title-wrap+#saveVoiceNameBtn{margin-top:12px}
+#voicePreview{display:grid;gap:14px;margin:18px 0}
+.voice-part{display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.voice-part-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.voice-part-head strong,.voice-part-head small{display:block}.voice-part-head small{margin-top:4px;color:var(--muted);overflow-wrap:anywhere}
+.voice-part audio{display:block;width:100%;max-width:100%}
+.voice-part-actions{display:grid;grid-template-columns:1fr auto;gap:8px}.voice-part-actions button{min-width:0}
+#recordBtn{margin:14px 0 22px}.voice-thread-actions{display:grid;gap:8px;margin-top:6px}
