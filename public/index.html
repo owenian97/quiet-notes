@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Quiet Notes">
   <link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/library.css"><link rel="stylesheet" href="/ui-v4.css"><title>Quiet Notes</title>
 </head>
-<body><header><div class="brand"><span class="logo">✦</span><div><strong>Quiet Notes</strong><small>Saved privately inside this app</small></div></div><button id="homeBtn">Home</button></header><main class="shell">
+<body><header><div class="brand"><span class="logo">✦</span><div><strong>Quiet Notes</strong><small>Private working copies</small></div></div><button id="homeBtn">Home</button></header><main class="shell">
 <section id="libraryView">
   <div class="eyebrow">QUICK CAPTURE</div><h1>What do you want to capture?</h1>
   <div class="create-grid"><button id="newIdeaBtn" class="primary">＋ 💡 New Idea</button><button id="newTaskBtn" class="primary">＋ ☑ New Task</button><button id="newVoiceBtn" class="primary">＋ 🎙 Voice Memo</button></div>
@@ -15,16 +15,16 @@
   <p id="folderStatus" class="muted"></p><div id="noteList" class="note-list"></div>
 </section>
 <section id="editorView" hidden>
-  <div class="editor-top"><button id="backBtn">← Home & saved items</button><span id="fileStatus" class="muted">Unsaved</span></div><div class="eyebrow">NOTE TYPE</div>
+  <div class="editor-top"><span id="fileStatus" class="muted">New note · not saved yet</span></div><div class="eyebrow">NOTE TYPE</div>
   <div class="type-switch large"><button id="ideaBtn">💡 Idea</button><button id="taskBtn">☑ Task</button></div><label for="noteTitle">Name</label>
-  <div class="title-wrap"><span>[<span id="typeWord">Idea</span>-</span><input id="noteTitle" maxlength="60" value="xxx"><span>]</span></div>
-  <textarea id="note" maxlength="100000" placeholder="Capture it before it disappears…"></textarea><div class="composer-tools"><button id="emojiBtn">☺ Add Emoji</button><div id="emojiPicker" class="emoji-picker" hidden></div><span class="muted">Draft protected</span></div>
-  <button id="saveBtn" class="primary full">Save Name & Note</button><div class="secondary-actions"><button id="exportBtn">Export copy to Files / OneDrive</button><button id="deleteBtn" class="danger">Delete from Quiet Notes</button></div>
+  <div class="title-wrap"><span>[<span id="typeWord">Idea</span>-</span><input id="noteTitle" maxlength="60" value="" placeholder="Untitled"><span>]</span></div>
+  <textarea id="note" maxlength="100000" placeholder="Capture it before it disappears…"></textarea><div class="composer-tools"><button id="emojiBtn">☺ Add Emoji</button><div id="emojiPicker" class="emoji-picker" hidden></div><span id="draftStatus" class="muted">Autosave ready</span></div>
+  <button id="saveBtn" class="primary full">Save Note Now</button><p class="muted">Save keeps the working copy inside Quiet Notes. Export creates a separate file outside the app.</p><div class="secondary-actions"><button id="exportBtn">Export Current Copy to Files / OneDrive</button><button id="deleteBtn" class="danger">Delete from Quiet Notes</button></div>
 </section>
 <section id="voiceView" hidden>
-  <div class="editor-top"><button id="voiceBackBtn">← Home & saved items</button><span id="voiceSaveStatus" class="muted">Not recorded</span></div><div class="eyebrow">VOICE MEMO</div><h1>Record a thought</h1>
-  <label for="voiceTitle">Name</label><div class="title-wrap"><span>[Voice-</span><input id="voiceTitle" maxlength="60" value="xxx"><span>]</span></div>
+  <div class="editor-top"><span id="voiceSaveStatus" class="muted">Not recorded</span></div><div class="eyebrow">VOICE MEMO</div><h1>Record a thought</h1>
+  <label for="voiceTitle">Name</label><div class="title-wrap"><span>[Voice-</span><input id="voiceTitle" maxlength="60" value="" placeholder="Untitled"><span>]</span></div>
   <button id="saveVoiceNameBtn" class="full" disabled>Save/Rename Voice Memo</button><p class="muted">Enter a name before recording, or rename it afterward with the button above.</p>
   <div id="recordingStatus" class="recording-status"><span class="dot"></span><span id="recordingText">Ready to record</span><span id="timer">00:00</span></div><button id="recordBtn" class="primary full">● Start Recording</button><div id="voicePreview"></div>
 </section>
-</main><div id="toast" class="toast"></div><script type="module" src="/app.js?v=9"></script></body></html>
+</main><div id="toast" class="toast"></div><script type="module" src="/app.js?v=10"></script></body></html>
