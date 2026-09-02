@@ -10,4 +10,4 @@ header{height:auto;min-height:calc(70px + env(safe-area-inset-top));padding-top:
 .voice-part-head strong,.voice-part-head small{display:block}.voice-part-head small{margin-top:4px;color:var(--muted);overflow-wrap:anywhere}
 .voice-part audio{display:block;width:100%;max-width:100%}
 .voice-part-actions{display:grid;grid-template-columns:1fr auto;gap:8px}.voice-part-actions button{min-width:0}
-#recordBtn{margin:14px 0 22px}.voice-thread-actions{display:grid;gap:8px;margin-top:6px}
+#recordBtn{margin:4px 0 12px}#deleteVoiceThread{margin:0 0 22px}

@@ -12,7 +12,7 @@ export function createServer() {
       const url = new URL(req.url, 'http://localhost');
       if (url.pathname === '/health') {
         res.writeHead(200, {'content-type':'application/json','cache-control':'no-store'});
-        return res.end(JSON.stringify({ok:true,version:11}));
+        return res.end(JSON.stringify({ok:true,version:12}));
       }
       let pathname = decodeURIComponent(url.pathname);
       if (pathname === '/' || !path.extname(pathname)) pathname = '/index.html';
