@@ -27,7 +27,7 @@ export function createServer() {
       const file = await readFile(target);
       res.writeHead(200, {
         'content-type': types[path.extname(target)] || 'application/octet-stream',
-        'content-security-policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
+        'content-security-policy': "default-src 'self'; script-src 'self' 'sha256-LicstXC6JDmVTFFNkVw+a/ji8qMUDauLYei7Njr0lho='; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
         'x-content-type-options':'nosniff',
         'referrer-policy':'no-referrer'
       });
