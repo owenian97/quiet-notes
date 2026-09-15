@@ -7,9 +7,10 @@ export function matchesSavedItem(item, query) {
   if (!terms.length) return true;
   const typeLabel = item.type === 'IDEA' ? 'idea' : item.type === 'TASK' ? 'task' : item.type === 'VOICE' ? 'voice voice memo recording' : '';
   const photoFilenames=(item.attachments||[]).map(photo=>photo.filename).join(' ');
+  const photoText=(item.attachments||[]).map(photo=>photo.ocrText).filter(Boolean).join(' ');
   const checklistText=item.type==='TASK'?(item.checklist||[]).map(step=>step.text).join(' '):'';
   const tags=(item.tags||[]).map(tag=>`${tag} #${tag}`).join(' ');
-  const metadata = [item.title, item.filename, item.type, typeLabel, item.text, photoFilenames, checklistText,tags].filter(Boolean).join(' ').toLocaleLowerCase();
+  const metadata = [item.title, item.filename, item.type, typeLabel, item.text, photoFilenames,photoText,checklistText,tags].filter(Boolean).join(' ').toLocaleLowerCase();
   return terms.every(term => metadata.includes(term));
 }
 
