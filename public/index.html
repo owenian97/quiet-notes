@@ -20,6 +20,7 @@
   <div class="type-switch large"><button id="ideaBtn">💡 Idea</button><button id="taskBtn">☑ Task</button></div><label for="noteTitle">Name</label>
   <div class="title-wrap"><span>[<span id="typeWord">Idea</span>-</span><input id="noteTitle" maxlength="60" value="" placeholder="Untitled"><span>]</span></div>
   <textarea id="note" maxlength="100000" placeholder="Capture it before it disappears…"></textarea><div class="composer-tools"><button id="emojiBtn">☺ Add Emoji</button><div id="emojiPicker" class="emoji-picker" hidden></div><span id="draftStatus" class="muted">Autosave ready</span></div>
+  <input id="photoInput" class="sr-only" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-label="Choose or take a photo"><button id="addPhotoBtn" type="button" class="full">＋ Add Photo</button><div id="photoPreview" class="photo-list" aria-live="polite"></div>
   <button id="saveBtn" class="primary full">Save Note Now</button><p class="muted">Save keeps the working copy inside Quiet Notes. Export creates a separate file outside the app.</p><div class="secondary-actions"><button id="exportBtn">Export Current Copy to Files / OneDrive</button><button id="deleteBtn" class="danger">Delete from Quiet Notes</button></div>
 </section>
 <section id="voiceView" hidden>
@@ -28,4 +29,4 @@
   <button id="saveVoiceNameBtn" class="full" disabled>Save/Rename Voice Memo</button>
   <div id="recordingStatus" class="recording-status"><span class="dot"></span><span id="recordingText">Ready to record</span><span id="timer">00:00</span></div><div id="voicePreview"></div><button id="recordBtn" class="primary full">● Start Recording</button><button id="deleteVoiceThread" class="danger full" hidden>Delete entire voice memo</button>
 </section>
-</main><div id="toast" class="toast"></div><script type="module" src="/app.js?v=14"></script></body></html>
+</main><dialog id="photoDialog" class="photo-dialog" aria-labelledby="photoDialogName"><p id="photoDialogName"></p><img id="photoDialogImage" alt=""><button id="closePhotoDialog" type="button" class="full">Close</button></dialog><div id="toast" class="toast"></div><script type="module" src="/app.js?v=15"></script></body></html>
