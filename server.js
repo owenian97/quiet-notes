@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const publicDir = fileURLToPath(new URL('./public/', import.meta.url));
+const fflateFile = fileURLToPath(new URL('./node_modules/fflate/esm/browser.js', import.meta.url));
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.webmanifest':'application/manifest+json','.svg':'image/svg+xml'};
 
 export function createServer() {
@@ -13,6 +14,11 @@ export function createServer() {
       if (url.pathname === '/health') {
         res.writeHead(200, {'content-type':'application/json','cache-control':'no-store'});
         return res.end(JSON.stringify({ok:true,version:12}));
+      }
+      if (url.pathname === '/vendor/fflate.js') {
+        const file=await readFile(fflateFile);
+        res.writeHead(200,{'content-type':'text/javascript; charset=utf-8','cache-control':'public, max-age=31536000, immutable','x-content-type-options':'nosniff'});
+        return res.end(file);
       }
       let pathname = decodeURIComponent(url.pathname);
       if (pathname === '/' || !path.extname(pathname)) pathname = '/index.html';
