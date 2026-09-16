@@ -1,0 +1,10 @@
+.note-card{position:relative}
+.note-card .note-item{padding-right:76px}
+.pin-toggle{position:absolute;right:9px;top:9px;min-height:42px;padding:6px 9px;border-color:#536987;background:#101a29;font-size:13px}
+.pin-toggle span{display:block;font-size:10px}
+.note-card.pinned .note-item{border-color:#7faeff}
+.note-card.pinned .pin-toggle{background:#dce9ff;color:#0b1930;border-color:#dce9ff}
+.library-section{display:grid;gap:10px}
+.library-section+.note-card,.library-section+.task-group{margin-top:14px}
+.library-section-heading{display:flex;align-items:center;justify-content:space-between;margin:0;color:#9fc1ff;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.library-section-heading span{display:grid;place-items:center;min-width:24px;height:24px;border-radius:99px;background:#ffffff10;color:var(--text);font-size:12px}
